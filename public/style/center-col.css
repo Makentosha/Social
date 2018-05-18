@@ -22,7 +22,7 @@
 }
 
 #create-post > #form > img {
-	margin: 27px 10px;
+	margin: 17px 10px;
 	height: 55px;
 	width: 55px;
 	border-radius: 50%;
@@ -35,7 +35,8 @@
 	border-color: #dadada;
 	border-radius: 4px;
 	height: 36px;
-	margin: 30px 0;
+	min-height: 36px;
+	margin: 20px 0;
 	width: 225px !important;
 	padding: 6px 12px;
 	color: #6d6e71;
@@ -50,7 +51,7 @@
 	position: absolute;
 	padding: 0;
 	display: inline-block;
-	margin: 43px 0;
+	margin: 35px 0;
 }
 
 #create-post > ul > li {
@@ -77,7 +78,7 @@
 	background-color: #27aae1;
 	color: white;
 	border-radius: 16px;
-	margin: 37px 21px 0 0;
+	margin: 30px 21px 0 0;
 }
 
 .post {
@@ -93,16 +94,74 @@
 	border-radius: 4px 4px 0 0;
 }
 
-.post > .user {
-	width: 100%;
-	/*background-color: red;*/
-}
-
-.post > .user > img {
+.post > img {
 	height: 50px;
 	width: 50px;
 	border-radius: 50%;
 	object-fit: cover;
 	object-position: center;
 	margin: 17px;
+	float: left;
+}
+
+.post > .post-info {
+	height: 88px;
+	width: 500px;
+	/*background-color: red;*/
+	display: inline-block;
+	border-bottom: 1px solid #ececec;
+	font-family: 'Open Sans';
+}
+
+.post > .post-info > .post-owner-name {
+	color: #27aae1;
+	display: inline-block;
+	font-size: 15px;
+	margin-bottom: 0;
+}
+
+.post > .post-info > .post-action {
+	width: 300px;
+	color: gray;
+	font-size: 13px;
+	margin-bottom: 0;
+	margin-right: 0;
+}
+
+.post > .post-info > .likes {
+	position: relative;
+	right: 0px;
+	/*top: 100px;*/
+	float: right;
+	bottom: 40%;
+}
+
+.post > .post-info > .likes > ion-icon[name="md-thumbs-up"] {
+	color: #8dc63f;
+}
+
+.post > .post-info > .likes > ion-icon[name="md-thumbs-up"] + label{
+	font-size: 15px;
+	margin: 0 15px 0 3px;
+	color: #8dc63f;
+}
+
+.post > .post-info > .likes > ion-icon[name="md-thumbs-down"] {
+	color: #ef4136;
+}
+
+.post > .post-info > .likes > ion-icon[name="md-thumbs-down"] + label {
+	font-size: 15px;
+	margin: 0 15px 0 3px;
+	color: #ef4136;
+}
+
+.post > .description {
+	margin-left: 84px;
+    margin-right: 20px;
+    font-size: 13px;
+    color: gray;
+    line-height: 23px;
+    font-family: Open Sans;
+	border-bottom: 1px solid #ececec;
 }
