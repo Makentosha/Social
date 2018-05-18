@@ -1,0 +1,108 @@
+#center-col {
+	float: left;
+	height: 500px;
+	width: 605px;
+	margin: 0 auto;
+	padding: 0px 10px;
+	/*background-color: red;*/
+}
+
+#create-post {
+	width: 100%;
+	height: auto;
+	/*background-color: red;*/
+	border-bottom: 1px solid #ececec;
+}
+
+#create-post > #form {
+	height: auto;
+	width: 339px;
+	display: inline-block;
+	/*background-color: purple;*/
+}
+
+#create-post > #form > img {
+	margin: 27px 10px;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+	float: left;
+}
+
+#create-post > #form > textarea {
+	border-color: #dadada;
+	border-radius: 4px;
+	height: 36px;
+	margin: 30px 0;
+	width: 225px !important;
+	padding: 6px 12px;
+	color: #6d6e71;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+#create-post > #form > textarea:focus {
+	outline: none;
+}
+
+#create-post > ul {
+	position: absolute;
+	padding: 0;
+	display: inline-block;
+	margin: 43px 0;
+}
+
+#create-post > ul > li {
+	display: inline-block;
+	margin: 0 5px;
+	list-style-type: none;
+	color: #6d6e71;
+	transition: .2s;
+	font-size: 19px;
+}
+
+#create-post > ul > li:hover {
+	color: #27aae1;
+	cursor: pointer;
+}
+
+#create-post > button {
+	/*position: absolute;*/
+	display: inline-block;
+	float: right;
+	border: none;
+	height: 32px;
+	width: 100px;
+	background-color: #27aae1;
+	color: white;
+	border-radius: 16px;
+	margin: 37px 21px 0 0;
+}
+
+.post {
+	margin-top: 20px;
+	width: 605px;
+	height: auto;
+	background-color: #f8f8f8;
+	border: 1px solid #f1f2f2;
+}
+
+.post > .content > img {
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+}
+
+.post > .user {
+	width: 100%;
+	/*background-color: red;*/
+}
+
+.post > .user > img {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+	margin: 17px;
+}

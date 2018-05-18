@@ -1,0 +1,64 @@
+#right-col {
+	float: right;
+	width: 155px;
+	padding: 0px 10px;
+}
+
+#right-col > p {
+	margin: 0;
+	font-size: 17px;
+	/*font-family: 'Open Sans', sans-serif;*/
+	color: #8e8e8e;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.person	{
+	height: 60px;
+}
+
+#right-col > .person > .img-container {
+	height: 100%;
+	width: 40px;
+	display: inline-block;
+	float: left;
+}
+
+#right-col > .person > .img-container > img {
+	margin: 10px 0;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+#right-col > .person > .text {
+	float: right;
+	position: static;
+	height: 49px;
+	width: 101px;
+	border-bottom: 1px solid #e2e2e2;
+	padding: 10px 0 0 10px;
+	font-family: "Open Sans";
+	overflow: visible;
+}
+
+#right-col > .person > .text > .name {
+	white-space: nowrap;
+	text-decoration: none;
+	color: #27aae1;
+	width: 200px;
+	font-size: 13px;
+}
+#right-col > .person > .text > .name:hover {
+	text-decoration: underline;
+}
+
+#right-col > .person > .text > .add {
+	display: block;
+	color: #8dc63f;
+	font-size: 12px;
+	text-decoration: none;
+}
+#right-col > .person > .text > .add:hover {
+	text-decoration: underline;
+}
