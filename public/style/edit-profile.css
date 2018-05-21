@@ -1,0 +1,134 @@
+#body-container {
+	padding: 20px 0!important;
+}
+
+#left-col {
+	padding-top: 70px;
+}
+
+#edit-navigation-profile > ul {
+	padding: 0;
+}
+
+#edit-navigation-profile > ul > li {
+	list-style-type: none;
+	line-height: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	border-bottom: 1px solid #e2e2e2;
+	padding-left: 20px;
+	color: #6d6e71;
+}
+
+#edit-navigation-profile > ul > li > ion-icon {
+	margin-right: 10px;
+	font-size: 17px;
+}
+
+#edit-navigation-profile > ul > li:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.selected {
+	color: #8dc63f!important; 
+	border-left: 2px solid #8dc63f;
+}
+
+#center-col {
+	font-family: 'Open Sans';
+	color: #6d6e71;
+}
+
+#basic-information {
+	position: relative;
+	border-top: 1px solid #e2e2e2;
+	padding: 20px 10px;
+	height: 585px;
+}
+
+#basic-information > .half-size-form-group {
+	display: inline-block;
+	width: 270px;
+	padding: 10px 10px;
+}
+
+#basic-information > .full-size-form-group {
+	display: inline-block;
+	width: 564px;
+	padding: 10px 10px;
+}
+
+label {
+	display: block;
+	font-size: 14px;
+	color: #6d6e71;
+	height: 25px;
+}
+
+input[type='text'] {
+	height: 25px;
+	width: 100%;
+	padding: 3px 6px;
+	line-height: 25px;
+	color: #939598;
+	border: 1px solid #d4d4d4;
+	border-radius: 4px;
+	transition: .5s;
+}
+
+input:focus {
+	border-color: #27aae1;
+	outline: none;
+	-webkit-box-shadow: 0px 0px 12px -2px rgba(39,169,225,1);
+	-moz-box-shadow: 0px 0px 12px -2px rgba(39,169,225,1);
+	box-shadow: 0px 0px 12px -2px rgba(39,169,225,1);
+}
+
+select {
+	height: 33px;
+	padding: 3px 6px;
+	background-color: white;
+	border: 1px solid #d4d4d4;
+	border-radius: 4px;
+	color: #939598;
+	line-height: 25px;
+	margin: 0 2px;
+	transition: .5s;
+}
+
+select[name='date'] {
+	width: 100px;
+}
+select[name='month'] {
+	width: 200px;
+}
+select[name='year'] {
+	width: 229px;
+}
+
+select:focus {
+	border-color: #27aae1;
+	outline: none;
+	-webkit-box-shadow: 0px 0px 12px -2px rgba(39,169,225,1);
+	-moz-box-shadow: 0px 0px 12px -2px rgba(39,169,225,1);
+	box-shadow: 0px 0px 12px -2px rgba(39,169,225,1);
+}
+
+input[type='radio'] {
+	display: inline-block;
+}
+
+#basic-information > button {
+	height: 32px;
+	width: 575px;
+	margin: 10px;
+	border: none;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 13px;
+	background-color: #27aae1;
+	color: white;
+	border-radius: 16px;
+	vertical-align: middle;
+}

@@ -1,0 +1,60 @@
+<%- include('header'); -%>
+<link rel="stylesheet" type="text/css" href="/style/my-profile.css">
+<body>
+	<div id="profile-container" style="background-image: url('/images/cover/<%= user.user_ID %>.jpg')">
+		<div id="profile-nav-bar">
+			<div id="profile-info">
+				<img src="/images/photo/<%= user.cover_photo %>.jpg">
+				<h3><%= user.first_name + " " + user.last_name%></h3>
+			</div>
+			<div id="navigation-items">
+				<ul>
+					<li id="timeline">Timeline</li>
+					<li id="about">About</li>
+					<li id="album">Album</li>
+					<li id="friends">Friends</li>
+					<li id="edit-profile">Edit-profile</li>
+				</ul>
+			</div>
+			<button>
+				Add Friend
+			</button>
+		</div>
+	</div>
+
+
+	<div id="body-container">
+		<!-- Here JavaScript will load content -->
+	</div>
+
+
+	<script type="text/javascript">
+		function requestContent(content) {
+			let http = new XMLHttpRequest();
+			http.onreadystatechange = () => {
+				if (http.readyState == 4 && http.status == 200) {
+					$('#body-container').fadeOut('fast', () => {
+						$('#body-container')[0].innerHTML = http.responseText;
+					});
+					$('#body-container').fadeIn('fast');
+				}
+			}
+
+			http.open('POST', `/my-profile/${content}`, true);
+			http.send("timeline");
+		}
+
+		requestContent('edit-profile');
+
+		let current = $('#edit-profile')[0];
+
+		$('li').click((e) => {
+			current.style.color = 'white';
+			current = e.target;
+			current.style.color = '#27aae1';
+			requestContent(current.innerHTML);
+		})
+
+	</script>
+</body>
+</html>

@@ -17,9 +17,10 @@ let con = mysql.createConnection({
 router.get('/', (req, res) => {
 	if (!req.session.user)
 		res.render("login");
-	else
-		res.render("home");
-
+	else {
+		console.log(req.session.user);
+		res.render("home", {user: req.session.user});
+	}
 })
 
 router.get('/login', (req, res) => {
@@ -32,11 +33,15 @@ router.get('/login.css', (req, res) => {
 })
 
 router.get('/home', (req, res) => {
-	res.render('home');
+	if (!req.session.user)
+		res.render("login");
+	else {
+		console.log(req.session.user);
+		res.render("home", {user: req.session.user});
+	}
 })
 
 router.post('/login', (req, res) => {
-	console.log(req.session.user);
 	let body = '';
 	req.on('data', (chunk) => {
 		body += chunk;
@@ -45,16 +50,16 @@ router.post('/login', (req, res) => {
 	req.on('end', () => {
 		body = qs.parse(body);
 
-		con.query(`SELECT email, password FROM users WHERE email='${body.email}'`, (err, result) => {
+		con.query(`SELECT * FROM users WHERE email='${body.email}'`, (err, result) => {
 			if (result.length == 0) {
 				res.end('');
 			} else {
 				bcrypt.compare(body.password, result[0].password, (err, re) => {
 					if (err) throw err;
 
-
 					//here log in user
-					req.session.user = body.email;
+					delete result[0].password;
+					req.session.user = result[0];
 					res.end("true");
 				})
 			}

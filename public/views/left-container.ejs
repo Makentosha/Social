@@ -1,10 +1,12 @@
 <div id="left-col">
-			<div id="user-cover">
-				<div id="photo-container">
-					<img src="images/photo/1.jpg">
+			<div id="user-cover-img" style="background-image: url('/images/cover/<%= user.user_ID %>.jpg')">
+				<div id="user-cover">
+					<div id="photo-container">
+						<img src="images/photo/<%= user.cover_photo %>.jpg">
+					</div>
+					<p id="name"><a href="my-profile"><%= user.first_name + " " + user.last_name %></a></p>
+					<!-- <p id="followers"><a href="">1451 followers</a></p> -->
 				</div>
-				<p id="name"><a href="">Sophia Jacob</a></p>
-				<!-- <p id="followers"><a href="">1451 followers</a></p> -->
 			</div>
 
 			<div id="navigation-container">

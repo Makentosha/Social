@@ -7,7 +7,7 @@ const mainRouter = require('./routes/loginRouter.js');
 const scriptsRouter = require('./routes/scriptsRouter.js');
 const styleRouter = require('./routes/styleRouter.js');
 const imageRouter = require('./routes/imageRouter.js');
-
+const myProfileRouter = require('./routes/myProfileRouter.js')
 // Setting view engine
 app.set('views', 'public/views/');
 app.set('view engine', 'ejs');
@@ -27,6 +27,7 @@ app.use('/login', mainRouter);
 app.use('/style', styleRouter);
 app.use('/script', scriptsRouter);
 app.use('/images', imageRouter);
+app.use('/my-profile', myProfileRouter);
 
 app.listen('4000', () => {
 	console.log("Listening for 4000");

@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 
 	logo.click(() => {
-		window.location.href = "localhost:4000/";
+		window.location.href = "/";
 	})
 
 	$(window).scroll((e) => {
@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 		http.onreadystatechange = () => {
 			if (http.readyState == 4 && http.status == 200)
-				location.reload();
+				window.location.href = "/";
 		}
 
 		http.open("POST", "/logout", true);

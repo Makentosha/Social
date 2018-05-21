@@ -1,0 +1,189 @@
+<link rel="stylesheet" type="text/css" href="style/edit-profile.css">
+
+<div id="left-col">
+	<div id="edit-navigation-profile">
+		<ul>
+			<li class="selected">
+				<ion-icon name="ios-information-circle-outline"></ion-icon>
+				Basic Information
+			<li>
+				<ion-icon name="ios-school"></ion-icon>
+				Education and Work
+			</li>
+			<li>
+				<ion-icon name="ios-heart-empty"></ion-icon>
+				My interests
+			</li>
+			<li>
+				<ion-icon name="ios-settings"></ion-icon>
+				Account Settiongs (t)
+			</li>
+			<li>
+				<ion-icon name="ios-lock"></ion-icon>
+				Change Password
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div id="center-col">
+	<h3><ion-icon name="md-checkmark-circle-outline"></ion-icon>
+	Edit basic information</h3>
+	<form id="basic-information">
+		<div class="half-size-form-group">
+			<label>First name</label>
+			<input type="text" name="first_name" value="<%= user.first_name %>">
+		</div>
+		<div class="half-size-form-group">
+			<label>Last name</label>
+			<input type="text" name="last_name" value="<%= user.last_name %>">
+		</div>
+		<div class="full-size-form-group">
+			<label>My email</label>
+			<input type="text" name="email" value="<%= user.email %>">
+		</div>
+		<div class="full-size-form-group">
+			<label>Date of Birth</label>
+			<select name="date">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+			</select>
+			<select name="month">
+				<option value="01">January</option>
+				<option value="02">February</option>
+				<option value="03">March</option>
+				<option value="04">April</option>
+				<option value="05">May</option>
+				<option value="06">June</option>
+				<option value="07">July</option>
+				<option value="08">August</option>
+				<option value="09">September</option>
+				<option value="10">Octomber</option>
+				<option value="11">November</option>
+				<option value="12">December</option>
+			</select>
+			<select name="year">
+				<option value="1990">1990</option>
+				<option value="1991">1991</option>
+				<option value="1992">1992</option>
+				<option value="1993">1993</option>
+				<option value="1994">1994</option>
+				<option value="1995">1995</option>
+				<option value="1996">1996</option>
+				<option value="1997">1997</option>
+				<option value="1998">1998</option>
+				<option value="1999">1999</option>
+				<option value="2000">2000</option>
+				<option value="2001">2001</option>
+				<option value="2002">2002</option>
+				<option value="2003">2003</option>
+				<option value="2004">2004</option>
+				<option value="2005">2005</option>
+				<option value="2006">2006</option>
+				<option value="2007">2007</option>
+				<option value="2008">2008</option>
+				<option value="2009">2009</option>
+				<option value="2010">2010</option>
+				<option value="2011">2011</option>
+				<option value="2012">2012</option>
+			</select>
+		</div>
+		<div class="full-size-form-group">
+			<label>I am a:</label>
+			<% if (user.sex == 'M') { %>
+				<input type="radio" name="sex" value="M" checked="checked">Male
+				<input type="radio" name="sex" value="F">Famale
+			<% } else { %>
+				<input type="radio" name="sex" value="M">Male
+				<input type="radio" name="sex" value="F" checked="checked">Famale
+			<% } %>
+			</div>
+		<div class="half-size-form-group">
+			<label>My contry</label>
+			<input type="text" name="country" value="<%= user.country %>">
+		</div>
+		<div class="half-size-form-group">
+			<label>My City</label>
+			<input type="text" name="city" value="<%= user.city %>">
+		</div>
+		<button>Save Changes</button>
+	</form>
+</div>
+
+<div id="right-col">
+	<p>Who to folow</p>
+	<div class="person">
+		<div class="img-container">
+			<img src="images/photo/2.jpg">
+		</div>
+		<div class="text">
+			<a class="name" href="">Aida Roisin</a>
+			<a class="add" href="">Add friend</a>
+		</div>
+	</div>
+	<div class="person">
+		<div class="img-container">
+			<img src="images/photo/3.jpg">
+		</div>
+		<div class="text">
+			<a class="name" href="">Archibald Caio</a>
+			<a class="add" href="">Add friend</a>
+		</div>
+	</div>
+	<div class="person">
+		<div class="img-container">
+			<img src="images/photo/4.jpg">
+		</div>
+		<div class="text">
+			<a class="name" href="">Alba Tilly</a>
+			<a class="add" href="">Add friend</a>
+		</div>
+	</div>
+	<div class="person">
+		<div class="img-container">
+			<img src="images/photo/5.png">
+		</div>
+		<div class="text">
+			<a class="name" href="">Olivia Steward</a>
+			<a class="add" href="">Add friend</a>
+		</div>
+	</div>
+	<div class="person">
+		<div class="img-container">
+			<img src="images/photo/6.jpg">
+		</div>
+		<div class="text">
+			<a class="name" href="">Dollie Primergse</a>
+			<a class="add" href="">Add friend</a>
+		</div>
+	</div>
+</div>
