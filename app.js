@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const session = require('express-session');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extended: true}));
 
 // define Routers
 const mainRouter = require('./routes/loginRouter.js');
@@ -11,7 +14,6 @@ const myProfileRouter = require('./routes/myProfileRouter.js')
 // Setting view engine
 app.set('views', 'public/views/');
 app.set('view engine', 'ejs');
-
 
 // Setting Session
 app.use(session({

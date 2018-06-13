@@ -29,22 +29,38 @@
 
 
 	<script type="text/javascript">
-		function requestContent(content) {
+
+		function requestHTMLContent(content) {
 			let http = new XMLHttpRequest();
 			http.onreadystatechange = () => {
 				if (http.readyState == 4 && http.status == 200) {
 					$('#body-container').fadeOut('fast', () => {
+						http.respostType = 'document';
 						$('#body-container')[0].innerHTML = http.responseText;
+						$('#body-container').fadeIn('fast', () => {
+							let imported = document.createElement('script');
+							imported.className = "importedScript";
+							imported.src = `/script/edit-profile.js`;
+							document.head.appendChild(imported);
+						});
 					});
-					$('#body-container').fadeIn('fast');
+
 				}
 			}
 
 			http.open('POST', `/my-profile/${content}`, true);
-			http.send("timeline");
+			http.send();
 		}
 
-		requestContent('edit-profile');
+		function requestJSContent(content) {
+			$(".importedScript")[0].remove();
+			let imported = document.createElement('script');
+			imported.className = "importedScript";
+			imported.src = `/script/${content}.js`;
+			document.head.appendChild(imported);
+		}
+
+		requestHTMLContent('edit-profile');
 
 		let current = $('#edit-profile')[0];
 
@@ -52,8 +68,11 @@
 			current.style.color = 'white';
 			current = e.target;
 			current.style.color = '#27aae1';
-			requestContent(current.innerHTML);
+			requestHTMLContent(current.innerHTML);
+			requestJSContent(current.innerHTML.toLowerCase());
 		})
+
+
 
 	</script>
 </body>

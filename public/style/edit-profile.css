@@ -18,14 +18,27 @@
 	border-bottom: 1px solid #e2e2e2;
 	padding-left: 20px;
 	color: #6d6e71;
+	/*z-index: 3;*/
+}
+
+#edit-navigation-profile > ul > li:hover {
+	cursor: pointer;
+}
+
+#edit-navigation-profile > ul > li > p {
+	display: inline-block;
+	margin: 0;
+	width: 177px;
+	pointer-events: none;
 }
 
 #edit-navigation-profile > ul > li > ion-icon {
 	margin-right: 10px;
 	font-size: 17px;
+	pointer-events: none;
 }
 
-#edit-navigation-profile > ul > li:hover {
+#edit-navigation-profile > ul > li:hover > p {
 	text-decoration: underline;
 	cursor: pointer;
 }
@@ -33,6 +46,8 @@
 .selected {
 	color: #8dc63f!important; 
 	border-left: 2px solid #8dc63f;
+	padding-left: 18px !important;
+	pointer-events: none;
 }
 
 #center-col {

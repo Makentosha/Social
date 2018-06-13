@@ -54,6 +54,7 @@
 	text-decoration: none;
 	color: white;
 	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
 
 }
 #user-cover > #name > a:hover {

@@ -1,11 +1,15 @@
 $(document).ready(function(){
 	let logo = $("#logo");
+	let home = $("#home");
 	let onlineContainer = $("#online-container");
 	let bodyContainer = $("#body-container");
 	let	logOutBt = $("#logout");
 
 
 	logo.click(() => {
+		window.location.href = "/";
+	})
+	home.click(() => {
 		window.location.href = "/";
 	})
 
